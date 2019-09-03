@@ -27,7 +27,7 @@ defmodule Jwt.Mixfile do
     {:httpoison, "~> 1.0" },
     {:poison, "~> 2.0 or ~> 3.0" },
     {:ex_doc, only: :dev, runtime: false, github: "elixir-lang/ex_doc" },
-    {:cowboy, "~> 1.0"},
+    {:cowboy, "~> 1.0", override: true},
     {:plug, "~> 1.0"},
     {:stash, "~> 1.0"},
     {:timex, "~> 3.0"}
