@@ -16,7 +16,7 @@ defmodule Jwt.FirebaseCerts.PublicKey do
 
   defp extract_public_key_for_id({:error, _}, _id), do: nil
   defp extract_public_key_for_id({:ok, body}, id) do
-    {:ok, parsed} = Poison.Parser.parse body
+    {:ok, parsed} = Jason.decode body
 
     cert = parsed[id]
 
